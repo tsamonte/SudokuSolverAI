@@ -27,17 +27,17 @@ In this project, the AI will solve puzzles that follow the basic rules of Sudoku
 
 For example, consider the following board (where 0 means an empty space)
 
-								8 0 0 | 0 0 0 | 0 0 0  
-								0 0 0 | 0 0 0 | 0 0 0  
-								5 0 6 | 0 0 0 | 0 0 0  
-								- - - - - - - - - - -  
-								0 0 0 | 0 9 0 | 0 0 0  
-								0 1 3 | 0 0 0 | 0 0 0  
-								0 0 0 | 0 0 0 | 0 0 0  
-								- - - - - - - - - - -  
-								0 0 0 | 0 0 0 | 0 0 0  
-								0 0 0 | 0 0 2 | 0 0 0  
-								0 0 0 | 0 0 0 | 0 0 0  
+	8 0 0 | 0 0 0 | 0 0 0  
+	0 0 0 | 0 0 0 | 0 0 0  
+	5 0 6 | 0 0 0 | 0 0 0  
+	- - - - - - - - - - -  
+	0 0 0 | 0 9 0 | 0 0 0  
+	0 1 3 | 0 0 0 | 0 0 0  
+	0 0 0 | 0 0 0 | 0 0 0  
+	- - - - - - - - - - -  
+	0 0 0 | 0 0 0 | 0 0 0  
+	0 0 0 | 0 0 2 | 0 0 0  
+	0 0 0 | 0 0 0 | 0 0 0  
 								
 For this board, N = 9, P = 3, Q = 3, and M = 7
 
@@ -71,3 +71,12 @@ For example, we could use the sample boards from the Sample_Boards directory in 
 If you would like to choose the heuristics you want to run, or use no heuristics at all, you can run the project using the following while in the project directory:
 
 	python3 src/Main.py [MRV | MAD] [LCV] [FC | NOR] [board_file_name]
+
+## Optional Supplement: Board Generation
+In this repo, I have included a board generator to generate random sudoku puzzles with parameters specified by you. To generate random sudoku puzzles, change into the "Sudoku_Generator" directory and run the following command:
+
+	make
+	
+You will be asked to enter a value for P, Q, M, and how many boards to make.  
+
+*\*Note that boards generated this way are still very likely to have a solution, but are not guaranteed to have one*
