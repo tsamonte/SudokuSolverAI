@@ -34,7 +34,7 @@ class BTSolver:
         return True
 
     """
-        Part 1 TODO: Implement the Forward Checking Heuristic
+        Forward Checking Heuristic
 
         This function will do both Constraint Propagation and check
         the consistency of the network
@@ -42,14 +42,13 @@ class BTSolver:
         (1) If a variable is assigned then eliminate that value from
             the square's neighbors.
 
-        Note: remember to trail.push variables before you change their domain
         Return: true is assignment is consistent, false otherwise
     """
     def forwardChecking ( self ):
         # for each assigned variable, check the direct neighbors
         # returns true if assignment is consistent
         # returns false if assignment is not consistent
-        #   or assignment causes neighbors' domain sizes to be zero.
+        # or assignment causes neighbors' domain sizes to be zero.
 
         for var in self.network.getVariables():
             if var.isAssigned(): # we only do forward checking on assigned variables
@@ -64,7 +63,7 @@ class BTSolver:
         return True
 
     """
-        Part 2 TODO: Implement both of Norvig's Heuristics
+        Norvig's Heuristics
 
         This function will do both Constraint Propagation and check
         the consistency of the network
@@ -75,7 +74,6 @@ class BTSolver:
         (2) If a constraint has only one possible place for a value
             then put the value there.
 
-        Note: remember to trail.push variables before you change their domain
         Return: true is assignment is consistent, false otherwise
     """
     def norvigCheck ( self ):
@@ -115,10 +113,7 @@ class BTSolver:
         return True
 
     """
-         Optional TODO: Implement your own advanced Constraint Propagation
-
-         Completing the three tourn heuristic will automatically enter
-         your program into a tournament.
+         Optional TODO: Implement new heuristics
      """
     def getTournCC ( self ):
         return None
@@ -137,7 +132,7 @@ class BTSolver:
         return None
 
     """
-        Part 1 TODO: Implement the Minimum Remaining Value Heuristic
+        Minimum Remaining Value Heuristic
 
         Return: The unassigned variable with the smallest domain
     """
@@ -158,8 +153,7 @@ class BTSolver:
         return minVar
 
     """
-        Part 2 TODO: Implement the Minimum Remaining Value Heuristic
-                       with Degree Heuristic as a Tie Breaker
+        Minimum Remaining Value Heuristic with Degree Heuristic as a Tie Breaker
 
         Return: The unassigned variable with, first, the smallest domain
                 and, second, the most unassigned neighbors
@@ -193,10 +187,7 @@ class BTSolver:
             return maxVar
 
     """
-         Optional TODO: Implement your own advanced Variable Heuristic
-
-         Completing the three tourn heuristic will automatically enter
-         your program into a tournament.
+         Optional TODO: Implement new heuristics
      """
     def getTournVar ( self ):
         return None
@@ -211,7 +202,7 @@ class BTSolver:
         return sorted( values )
 
     """
-        Part 1 TODO: Implement the Least Constraining Value Heuristic
+        Least Constraining Value Heuristic
 
         The Least constraining value is the one that will knock the least
         values out of it's neighbors domain.
@@ -240,10 +231,7 @@ class BTSolver:
         #to sort by values (ascending): sorted(a.items(), key = lambda t: (t[1],t[0]))
 
     """
-         Optional TODO: Implement your own advanced Value Heuristic
-
-         Completing the three tourn heuristic will automatically enter
-         your program into a tournament.
+         Optional TODO: Implement new heuristics
      """
     def getTournVal ( self, v ):
         return None
